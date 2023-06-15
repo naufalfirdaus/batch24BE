@@ -22,6 +22,7 @@ app.use(async(req,res,next)=> {
 })
 
 app.use('/region',routes.regionRoute)
+app.use('/auth',routes.userRoute)
 
 const dropDatabaseSync = false
 

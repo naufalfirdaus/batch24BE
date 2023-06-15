@@ -1,5 +1,8 @@
 import regionCtrl from "./regionCtrl";
-
+import countryCtrl from './countryCtrl';
+import userCtrl from "./userCtrl";
 export default {
-    regionCtrl
+    regionCtrl,
+    countryCtrl,
+    userCtrl
 }
