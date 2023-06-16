@@ -46,6 +46,19 @@ const create = async (req, res, next) => {
   }
 };
 
+const createImage = async(req,res) => {
+  try {
+    console.log();
+    const region = await req.context.models.regions.create({
+      region_name : req.body.name,
+      photo : req.file.filename
+    })
+    return res.send(region)
+  } catch (error) {
+    return res.send(error)
+  }
+}
+
 const update = async (req, res) => {
   try {
     const region = await req.context.models.regions.update(
@@ -92,4 +105,5 @@ export default {
   update,
   deleted,
   querySQL,
+  createImage
 };

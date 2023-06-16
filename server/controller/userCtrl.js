@@ -41,5 +41,5 @@ const findAllByUsername = async (username) => {
 
 export default {
   createUser,
-  findAllByUsername,
+  findAllByUsername
 };
